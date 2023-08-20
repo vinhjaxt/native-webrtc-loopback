@@ -13,11 +13,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: get libwebrtc
       run: |
-        mkdir webrtc
-        cd webrtc
-        wget https://github.com/crow-misia/libwebrtc-bin/releases/latest/download/libwebrtc-macos-x64.tar.xz >/dev/null 2>&1
-        tar xvzf libwebrtc-macos-x64.tar.xz >/dev/null 2>&1
-        cd ..
+        wget https://github.com/shiguredo-webrtc-build/webrtc-build/releases/download/m99.4844.1.0-hololens2.1/webrtc.macos_x86_64.tar.gz >/dev/null 2>&1
+        tar xvzf webrtc.macos_x86_64.tar.gz >/dev/null 2>&1
         ls -al webrtc
     - name: get boost
       run: |
