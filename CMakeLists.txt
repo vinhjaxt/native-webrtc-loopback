@@ -22,7 +22,7 @@ endif()
 project(native-webrtc-loopback C CXX)
 
 add_executable(native-webrtc-loopback main.cpp)
-target_compile_features(native-webrtc-loopback PUBLIC cxx_std_14)
+target_compile_features(native-webrtc-loopback PUBLIC cxx_std_17)
 
 if("${TARGET}" STREQUAL "ubuntu")
 target_compile_options(native-webrtc-loopback
