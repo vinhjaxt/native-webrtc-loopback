@@ -219,7 +219,7 @@ class LoopBack {
 
       peer_connection_callback->SetOnAddStream(
           [&](rtc::scoped_refptr<webrtc::MediaStreamInterface> stream) {
-            peer_connection->AddStream(stream);
+            peer_connection->AddStream(&stream);
           });
       std::cout << "set remote description start." << std::endl;
       peer_connection->SetRemoteDescription(
