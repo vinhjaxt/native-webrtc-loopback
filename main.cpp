@@ -172,7 +172,6 @@ rtc::scoped_refptr<webrtc::PeerConnectionInterface> CreatePeerConnection(
   ice_server.uri = "stun:stun.l.google.com:19302";
   servers.push_back(ice_server);
   config.servers = servers;
-  config.enable_dtls_srtp = true;
   config.sdp_semantics = webrtc::SdpSemantics::kPlanB;
 
   return peer_connection_factory->CreatePeerConnection(config, nullptr, nullptr,
