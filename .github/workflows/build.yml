@@ -15,6 +15,7 @@ jobs:
       run: |
         wget https://github.com/crow-misia/libwebrtc-bin/releases/latest/download/libwebrtc-macos-x64.tar.xz
         tar xvzf libwebrtc-macos-x64.tar.xz
+        mv libwebrtc* webrtc
     - name: get boost
       run: |
         wget https://boostorg.jfrog.io/artifactory/main/release/1.72.0/source/boost_1_72_0.tar.gz
