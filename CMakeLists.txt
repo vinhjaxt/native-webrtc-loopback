@@ -6,8 +6,8 @@ set(WEBRTC_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/webrtc/include)
 set(BOOST_LIBRARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/boost_1_72_0/lib)
 
 if("${TARGET}" STREQUAL "ubuntu")
-    set(CMAKE_C_COMPILER clang-8)
-    set(CMAKE_CXX_COMPILER clang++-8)
+    set(CMAKE_C_COMPILER clang)
+    set(CMAKE_CXX_COMPILER clang++)
     set(LIBCXX_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libcxx/include)
 endif()
 
@@ -22,7 +22,7 @@ endif()
 project(native-webrtc-loopback C CXX)
 
 add_executable(native-webrtc-loopback main.cpp)
-target_compile_features(native-webrtc-loopback PUBLIC cxx_std_17)
+target_compile_features(native-webrtc-loopback PUBLIC cxx_std_20)
 
 if("${TARGET}" STREQUAL "ubuntu")
 target_compile_options(native-webrtc-loopback
