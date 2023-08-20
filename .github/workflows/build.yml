@@ -13,9 +13,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: get libwebrtc
       run: |
-        wget https://github.com/crow-misia/libwebrtc-bin/releases/latest/download/libwebrtc-macos-x64.tar.xz
-        tar xvzf libwebrtc-macos-x64.tar.xz
+        wget https://github.com/crow-misia/libwebrtc-bin/releases/latest/download/libwebrtc-macos-x64.tar.xz >/dev/null 2>&1
+        tar xvzf libwebrtc-macos-x64.tar.xz >/dev/null 2>&1
         mv libwebrtc* webrtc
+        ls -al
     - name: get boost
       run: |
         wget https://boostorg.jfrog.io/artifactory/main/release/1.72.0/source/boost_1_72_0.tar.gz
