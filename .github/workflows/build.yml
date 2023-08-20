@@ -57,7 +57,7 @@ jobs:
           unzip boost_1_72_0.zip
           mkdir build
           cd build
-          cmake .. -G "Visual Studio 16 2019" -DTARGET="windows"
+          cmake .. -G "Visual Studio 17 2022" -DTARGET="windows"
           cmake --build . --config Release
       - name: Upload artifact
         uses: actions/upload-artifact@v1.0.0
@@ -94,7 +94,7 @@ jobs:
           cd ../
           cp ./buildtools/third_party/libc++/__config_site ./libcxx/include/
       - name: get clang
-        run: sudo apt install -y clang-8
+        run: sudo apt install -y clang
       - name: get boost
         run: |
           wget https://boostorg.jfrog.io/artifactory/main/release/1.72.0/source/boost_1_72_0.tar.gz
